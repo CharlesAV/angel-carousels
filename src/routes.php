@@ -1,5 +1,5 @@
 <?php
-
+$test = 1;
 Route::group(array('prefix'=>admin_uri('carousels'), 'before'=>'admin'), function() {
 
 	$controller = 'AdminCarouselController';
