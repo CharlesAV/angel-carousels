@@ -15,7 +15,7 @@ class AdminCarouselController extends AdminCrudController {
 
 	public function after_save($carousel, &$changes = array())
 	{
-		$CarouselSlide = App::make('CarouselSlide');
+		/*$CarouselSlide = App::make('CarouselSlide');
 
 		$slideHTML   = Input::get('slideHTML');
 		$slideNames  = Input::get('slideNames');
@@ -33,19 +33,18 @@ class AdminCarouselController extends AdminCrudController {
 				$slide->html = $html;
 				$slide->save();
 			}
-		}
+		}*/
 	}
 
-	public function delete_slide($id)
+	/*public function delete_slide($id)
 	{
 		$CarouselSlide = App::make('CarouselSlide');
 		$slide = $CarouselSlide::where('id', $id)->firstOrFail();
 		$carousel_id = $slide->carousel_id;
 		$slide->delete();
 
-		return Redirect::to('admin/carousels/edit/'.$carousel_id)->with('success', '
+		return Redirect::to('admin/carousels/edit/'.$carousel_id.'/items')->with('success', '
 			<p>Slide successfully deleted.</p>
 		');
-	}
-
+	}*/
 }
